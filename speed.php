@@ -21,7 +21,7 @@ foreach($config as $v1) {
 	$max += $v1[0];
 }
 
-$begin = time();
+$begin = microtime();
 
 for($i=0; $i < 100000; $i++){
 	$chance = mt_rand(1,$max);
@@ -38,6 +38,6 @@ for($i=0; $i < 100000; $i++){
 	if (!$match) echo 0, "#",$chance,"\r";
 }
 
-$end = time();
+$end = microtime();
 
 echo "diff is : ".($begin - $end);

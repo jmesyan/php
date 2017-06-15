@@ -74,6 +74,7 @@
          */
         final public function Trigger(EventArgs $e)
         {
+            print_r($e);
             foreach($this->_Receivers as $delegate)
                 $delegate($e);
         }
